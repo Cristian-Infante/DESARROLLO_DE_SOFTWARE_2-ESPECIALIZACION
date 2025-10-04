@@ -30,9 +30,7 @@ export class GifsService {
         bundle: 'low_bandwidth'
       }
     }).subscribe(resp => {
-      console.log( resp.data[0].images.original.url);
       const gifs = GifsMapper.mapGiphyItemsToGifsArray(resp.data);
-      console.log(gifs);
       this.trendingsGifs.set(gifs);
     });
   }
