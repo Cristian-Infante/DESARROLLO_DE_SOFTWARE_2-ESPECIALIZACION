@@ -1,0 +1,8 @@
+<!-- Masonry Grid Gallery -->
+<div class="columns-1 md:columns-2 lg:columns-3 xl:columns-4 gap-4 space-y-4">
+    @for (gif of gifList(); track $index) {
+        <div class="break-inside-avoid mb-4">
+            <gift-list-item [gif]="gif" />
+        </div>
+    }
+</div>
